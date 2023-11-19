@@ -14,8 +14,8 @@ Sumber daya manusia (SDM) adalah aset utama yang perlu dikelola dengan baik oleh
   - Kolom 'Pernah Bekerja' hanya memiliki satu nilai unik. Oleh karena itu, dalam rangka menjaga kualitas permodelan yang akan kita lakukan ke depan, saya merekomendasikan untuk menghapus kolom ini.
 
 ## Annual Report on Employee Number Changes 
+![1  Annual Report on Employee Number Changes](https://github.com/GedeWiraWasistha/Improving-Employee-Retention-by-Predicting-Employee-Attrition-Using-Machine-Learning/assets/149849772/9820a91e-1597-42a6-bf49-0a58f7887a40)
 
-<gambar>
 Dari hasil visualisasi menggunakan Waterfall Chart, terlihat bahwa penurunan jumlah karyawan dimulai pada tahun 2016. Analisis total perubahan per tahun didasarkan pada selisih antara jumlah karyawan yang bertahan dan jumlah karyawan yang mengundurkan diri. Pada tahun 2018, terjadi aktivitas perekrutan dan pengunduran diri yang paling signifikan, yang dapat dilihat dari arah negatif garis Waterfall Chart. Hal ini mengindikasikan situasi yang menunjukkan perusahaan dalam kondisi kurang menguntungkan, karena jumlah karyawan yang mengundurkan diri lebih banyak daripada jumlah karyawan yang bergabung atau bertahan.
 
 Hasil ini mencerminkan pentingnya perbaikan manajemen sumber daya manusia perusahaan. Perusahaan perlu melakukan peningkatan untuk memastikan retensi karyawan yang lebih baik dan menghindari biaya tambahan yang terkait dengan proses rekrutmen yang terus-menerus.
@@ -23,12 +23,12 @@ Hasil ini mencerminkan pentingnya perbaikan manajemen sumber daya manusia perusa
 ## Resign Reason Analysis for Employee Attrition Management Strategy
 
 ### Persentase karyawan aktif berdasarkan divisi pekerjaan
-<gambar>
+![2  Persentase karyawan aktif berdasarkan divisi pekerjaan](https://github.com/GedeWiraWasistha/Improving-Employee-Retention-by-Predicting-Employee-Attrition-Using-Machine-Learning/assets/149849772/d4165569-71d3-4eaf-ae57-bc379550040e)
 
 Grafik yang disajikan memperlihatkan distribusi persentase karyawan yang masih berada dalam berbagai divisi pekerjaan perusahaan. Dari data yang tersaji, menariknya, tujuh divisi memiliki tingkat retensi karyawan yang tinggi tanpa adanya kasus pengunduran diri. Namun, fokus khusus jatuh pada Divisi Data Analyst yang mencatat tingkat pengunduran diri sebesar 50%. Kondisi ini menegaskan urgensi untuk melakukan analisis mendalam terkait penyebab di balik tingginya tingkat perpindahan karyawan dari divisi ini.
 
 ### Alasan Pengunduran Diri Karyawan Berdasarkan JenjangKarir
-<gambar>
+![3  Alasan Pengunduran Diri Karyawan Berdasarkan JenjangKarir](https://github.com/GedeWiraWasistha/Improving-Employee-Retention-by-Predicting-Employee-Attrition-Using-Machine-Learning/assets/149849772/7ce4cc2b-975d-4c7a-9c12-5b119fe63f3a)
 
 Hasil pengamatan dan analisis grafik mengungkapkan beberapa pola yang signifikan dalam tingkat resignasi karyawan pada tiga tingkatan berbeda: Fresh Graduate, Middle Level, dan Senior. Pada tingkat Fresh Graduate, mayoritas karyawan mengundurkan diri disebabkan oleh ketidakmampuan melakukan pekerjaan dari jarak jauh (remote). Pada tingkat Middle Level, alasan utama resign adalah jam kerja yang terlalu padat. Sedangkan pada tingkat Senior, faktor utama adalah ketidakbahagiaan dalam pekerjaan.
 
@@ -54,20 +54,21 @@ Untuk mengatasi tantangan ini, saya merekomendasikan langkah-langkah strategis s
   - Dalam upaya untuk menormalkan skala semua fitur, telah diterapkan proses standarisasi dalam transformasi fitur. Sebagai hasilnya, terdapat cuplikan dataframe yang mencerminkan perubahan setelah proses transformasi, yang dapat dilihat pada gambar yang disajikan di sebelah kanan.
 
 ### Split Data
-<gambar>
+![4  Split Data](https://github.com/GedeWiraWasistha/Improving-Employee-Retention-by-Predicting-Employee-Attrition-Using-Machine-Learning/assets/149849772/b89cb56d-9af4-4e2a-abf7-5e2738da58db)
+
 
 Saya telah menetapkan kolom 'Resign' sebagai variabel target, sementara kolom lainnya saya gunakan sebagai atribut. 
 
 Setelah menguraikan data, saya menjalankan proses resampling pada dataset pelatihan dengan menerapkan metode SMOTE. Hal ini dilakukan untuk mengatasi potensi bias dalam hasil output..
 
 ### Evaluation Model 
-<gambar>
-<gambar>
+![5  Evaluation Model ](https://github.com/GedeWiraWasistha/Improving-Employee-Retention-by-Predicting-Employee-Attrition-Using-Machine-Learning/assets/149849772/518c22c5-00f0-4673-82e1-730f974316be)
+
 Setelah melakukan hyperparameter tuning, pilihan saya jatuh pada model DecisionTree sebagai model terbaik. Alasan saya memilih model DecisionTree adalah seimbangnya nilai Precision dan Recall yang dihasilkan oleh model tersebut. Dalam konteks ini, seimbangnya nilai Precision dan Recall menunjukkan bahwa model DecisionTree memiliki kemampuan yang baik dalam mengidentifikasi karyawan yang tetap (kelas 0) dan karyawan yang keluar (kelas 1) dengan tingkat kesalahan yang cukup rendah. Keputusan ini didasarkan pada pertimbangan bahwa seimbangnya Precision dan Recall dapat lebih meminimalkan risiko kesalahan yang dapat berdampak pada keputusan bisnis
 
 ## Presenting Machine Learning Products to the Business Users
 ### Confusion Matrix
-<gambar>
+![6  Confusion Matrix](https://github.com/GedeWiraWasistha/Improving-Employee-Retention-by-Predicting-Employee-Attrition-Using-Machine-Learning/assets/149849772/8971d766-ff34-4d53-bac3-d85349d57b97)
 
 Setelah menggunakan machine learning untuk memprediksi status karyawan (tetap atau keluar), diperoleh hasil berikut:
 1. Precision untuk kelas 0 (0.95): Precision untuk kelas 0 sebesar 0.95 menunjukkan bahwa dari semua prediksi yang model buat sebagai kelas 0 (karyawan yang tetap), sekitar 95% dari prediksi tersebut adalah benar, atau dengan kata lain, sebagian besar karyawan yang model prediksi sebagai karyawan yang tetap benar-benar adalah karyawan yang tetap.
@@ -78,12 +79,11 @@ Setelah menggunakan machine learning untuk memprediksi status karyawan (tetap at
 Kesimpulannya adalah model yang sudah dilatih memiliki performa yang baik dalam mengidentifikasi karyawan tetap dan karyawan yang keluar dari dataset yang digunakan.
 
 ### Feature Importance
-<gambar>
+![7  Feature Importance](https://github.com/GedeWiraWasistha/Improving-Employee-Retention-by-Predicting-Employee-Attrition-Using-Machine-Learning/assets/149849772/87d59ecc-c981-4bfb-80a3-7e94214a7c87)
 
 "AlasanResign" merupakan feature importance yang memiliki kolerasi paling tinggi dengan Target, hal ini  menandakan bahwa laporan alasan yang diberikan oleh karyawan saat mereka mengundurkan diri memiliki dampak yang sangat berarti terhadap keputusan tersebut. Hal ini memberikan wawasan penting bagi perusahaan untuk memahami faktor-faktor yang berperan dalam pengambilan keputusan karyawan untuk meninggalkan pekerjaan. Analisis ini membantu perusahaan untuk lebih mendalam memahami tren dan faktor-faktor yang memengaruhi tingkat turnover serta mengidentifikasi upaya perbaikan yang diperlukan untuk memitigasi masalah tersebut.
 
-
-<gambar>
+![8  Distribusi Alasan Resign](https://github.com/GedeWiraWasistha/Improving-Employee-Retention-by-Predicting-Employee-Attrition-Using-Machine-Learning/assets/149849772/e7a40898-cb06-4319-8fda-e48eda195de9)
 
 Dalam konteks ini, saya mengidentifikasi bahwa data yang memiliki nilai pada kolom "masih_bekerja" dan kolom "TanggalResign" kosong adalah data yang mewakili karyawan yang belum mengundurkan diri. Data ini menunjukkan bahwa karyawan-karyawan tersebut masih aktif bekerja dalam organisasi. Pemahaman ini didasarkan pada asumsi bahwa jika kolom "TanggalResign" kosong, maka tidak ada tanggal resign yang tercatat, yang menandakan bahwa karyawan tersebut masih bekerja.
 
