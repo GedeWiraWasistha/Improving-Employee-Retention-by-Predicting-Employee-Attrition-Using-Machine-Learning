@@ -3,6 +3,9 @@
 ## Latar Belakang
 Sumber daya manusia (SDM) adalah aset utama yang perlu dikelola dengan baik oleh perusahaan agar tujuan bisnis dapat tercapai dengan efektif dan efisien. Pada kesempatan kali ini, kita akan menghadapi sebuah permasalahan tentang sumber daya manusia yang ada di perusahaan. Fokus kita adalah untuk mengetahui bagaimana cara menjaga karyawan agar tetap bertahan di perusahaan yang ada saat ini yang dapat mengakibatkan bengkaknya biaya untuk rekrutmen karyawan serta pelatihan untuk mereka yang baru masuk. Dengan mengetahui faktor utama yang menyebabkan karyawan tidak merasa, perusahaan dapat segera menanggulanginya dengan membuat program-program yang relevan dengan permasalahan karyawan.
 
+## Dataset
+Data yang digunakan dalam analisis tersedia dalam berkas "hotel_bookings_data.csv". Yang terdiri dari 287 baris, 25 kolom
+
 ## EDA & Data Preprocessing
 - Handling Missing Values
   - Dalam pengelolaan data, saya telah mengambil langkah-langkah yang tepat untuk menangani nilai yang hilang. Kolom 'SkorKepuasanPegawai', 'JumlahKeikutsertaanProjek', 'JumlahKetidakhadiran' dan 'JumlahKeterlambatanSebulanTerakhir' diisi dengan nilai median karena adanya skewness.
